@@ -1,0 +1,38 @@
+#include <stdio.h>
+void su(int a,int arr[]){
+	scanf("%d",&a);
+	for(int i=0;i<a;i++){
+		//TODO
+		if(0!=a%i){
+			for(int j=0;j<a;j++){
+				arr[j]=i;
+			}
+		}
+	}
+}
+void yu(int a,int arr[]){
+	int m=0;
+	for(int j=0;j<a;j++){
+		//TODO
+		for(int i=0;i<a/2;i++){
+			//TODO
+			if(arr[j]+arr[i]==a){
+				//TODO
+				m=m+1;
+			}
+		}
+	}
+	printf("%d",m);
+}
+
+int main()
+
+
+{
+	int a=0;
+	int arr[100000];
+	su(a,arr);
+	yu(a,arr);
+	
+	return 0;
+}
