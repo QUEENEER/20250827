@@ -36,3 +36,46 @@ int main()
 	
 	return 0;
 }
+//change
+#include <stdio.h>
+int su(int *a,int arr[]){
+	scanf("%d",a);
+	int idx=0;
+	for(int i=2;i<*a;i++){
+		int ifprime=1;
+		for(int j=2;j*j<=i;j++){
+			if(i%j==0){
+				ifprime=0;
+				break;
+			}
+		}
+		if(ifprime){
+			arr[idx++]=i;
+		}
+	}
+	return idx;
+}
+void yu(int a,int arr[],int primecut){
+	int m=0;
+	for(int i=0;i<primecut;i++){
+		//TODO
+		for(int j=i;j<primecut;j++){
+			if(arr[i]+arr[j]==a){
+				m++;
+			}
+		}
+	}
+	printf("%d",m);
+}
+
+int main()
+
+
+{
+	int a=0;
+	int arr[100000];
+	int primecut=su(&a,arr);
+	yu(a,arr,primecut);
+	
+	return 0;
+}
