@@ -22,3 +22,29 @@ int main()
 	su(arr,brr,crr,m,&n);
 	return 0;
 }
+//change
+#include <stdio.h>
+int su(int arr[],int brr[],int crr[],int m,int *n){
+	for(int i=0;i<m;i++){
+		scanf("%d %d %d %d",&arr[i],&brr[i],&crr[i],n);
+	}
+	for(int i=0;i<*n;i++){
+		int t1=arr[i],t2=brr[i],t3=crr[i];
+		arr[i]=(t2+t3)/2;
+		brr[i]=(t1+t3)/2;
+		crr[i]=(t1+t2)/2;
+	}
+	for(int i=0;i<m;i++){
+		printf("%d %d %d\n",arr[i],brr[i],crr[i]);
+	}
+}
+
+int main()
+{
+	int m=0;
+	scanf("%d",&m);
+	int n;
+	int arr[m],brr[m],crr[m];
+	su(arr,brr,crr,m,&n);
+	return 0;
+}
